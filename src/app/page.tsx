@@ -100,12 +100,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-8">
-        {/* <p>offset: {offset}</p> */}
-        {/* <p>length: {images.length}</p> */}
-        {/* <p>activeIndex: {activeIndex}</p> */}
-        {/* <p>activeSlot: {activeSlot}</p> */}
-      </div>
+      {/* <div className="mt-8">
+        <p>offset: {offset}</p>
+        <p>length: {images.length}</p>
+        <p>activeIndex: {activeIndex}</p>
+        <p>activeSlot: {activeSlot}</p>
+      </div> */}
     </div>
   );
 }
