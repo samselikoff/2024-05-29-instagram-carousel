@@ -53,20 +53,12 @@ export default function Home() {
         </button>
         <div className="h-80 aspect-[2.3] overflow-hidden">
           <div
-            className="flex relative transition-[translate] h-full duration-500"
+            className="flex transition-[translate] h-full duration-500"
             style={{ translate: `-${activeIndex * 100}%` }}
           >
             {images.map((image) => (
-              <div key={image.id} className="relative h-full aspect-[2.3]">
-                <Image
-                  // key={image.id}
-                  src={image.src}
-                  // width={160}
-                  // height={160}
-                  fill
-                  className="object-cover"
-                  alt=""
-                />
+              <div key={image.id} className="relative w-full shrink-0">
+                <Image src={image.src} fill className="object-cover" alt="" />
               </div>
             ))}
           </div>
