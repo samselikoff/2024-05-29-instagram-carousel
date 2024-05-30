@@ -36,10 +36,10 @@ export default function Home() {
   let offset = activeIndex - activeSlot;
 
   return (
-    <div>
+    <div className="w-full px-4">
       <div className="flex items-center gap-2">
         <button
-          className="size-10 flex text-gray-500 hover:text-white items-center justify-center"
+          className={`${activeIndex === 0 ? "pointer-events-none opacity-0" : ""} size-10 flex text-gray-500 hover:text-white items-center justify-center transition`}
           onClick={() => {
             if (activeIndex > 0) {
               setActiveIndex(activeIndex - 1);
@@ -51,7 +51,7 @@ export default function Home() {
         >
           <ChevronLeftIcon className="size-6" />
         </button>
-        <div className="h-80 aspect-[2.3] overflow-hidden">
+        <div className="w-full grow aspect-[2.3] overflow-hidden">
           <div
             className="flex transition-[translate] h-full duration-500"
             style={{ translate: `-${activeIndex * 100}%` }}
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
 
         <button
-          className="size-10 flex text-gray-500 hover:text-white items-center justify-center"
+          className={`${activeIndex === images.length - 1 ? "pointer-events-none opacity-0" : ""} size-10 flex text-gray-500 hover:text-white items-center justify-center transition`}
           onClick={() => {
             if (activeIndex < images.length - 1) {
               setActiveIndex(activeIndex + 1);
